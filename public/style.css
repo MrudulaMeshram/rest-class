@@ -1,0 +1,13 @@
+div{
+    background-color: black;
+    padding: 20px;
+    border-radius: 5px;
+    margin:5px;
+    border:1px solid white;
+}
+h3{
+    color:yellow;
+}   
+h4{
+    color:magenta;
+}
