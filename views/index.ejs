@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All posts</title>
-    <link rel="stylesheet" href="/style.css">
+  <title>All Posts</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>Quora posts</h1>
 
-    <% for(let post of posts){%>
-        <div>
-            <h3>@<%= post.username %></h3>
-            <h4><%= post.content %></h4>
-            <br>
-            <a href="http://localhost:8080/posts/<%=post.id%>">
-                View Post
-            </a>
-        </div>
-        <%}%>
-        <br>
-        <br>
-        <a href="http://localhost:8080/posts/new">Create New Post</a>
+<h1>All Posts</h1>
+
+<% for (let post of posts) { %>
+  <div>
+    <h3>@<%= post.username %></h3>
+    <p><%= post.content %></p>
+
+    <a href="/posts/<%= post.id %>">View</a>
+    <a href="/posts/<%= post.id %>/edit">Edit</a>
+    <br>
+    <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+    <button>Delete post</button>
+    </form>
+  </div>
+  <hr>
+<% } %>
+
+<a href="/posts/new">Create New Post</a>
+
 </body>
 </html>

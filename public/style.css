@@ -1,13 +1,31 @@
+
 div{
-    background-color: black;
+    background-color: #614E72;
     padding: 20px;
     border-radius: 5px;
     margin:5px;
     border:1px solid white;
 }
-h3{
-    color:yellow;
-}   
 h4{
-    color:magenta;
+    color:#FF785E;
+}   
+h3{
+    color: #FFC345;
 }
+button{
+    background-color: #FF785E;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+p{
+    color:antiquewhite;
+}
+a{
+    color: #FFC345;
+    text-decoration: none;
+}
+
+
